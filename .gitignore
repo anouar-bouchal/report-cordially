@@ -2,7 +2,7 @@
 ~*
 
 # ignore .env
-.env
+# .env
 private
 assets
 *.docx
