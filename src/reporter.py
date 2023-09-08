@@ -4,8 +4,12 @@ import plotly.express as px
 from pathlib import Path
 
 
-EMAILS_FILE = Path(__file__).parent.parent / "data" / 'FCZ-TT.xlsx'
-DEMANDES_FILE = 'demandes-v2.xlsx'
+DATE = '2023-08-23'
+DATA_DIR = Path(__file__).parent.parent / "data"
+EMAILS_FILE_NAME = "ML-" + DATE + ".xlsx"
+DEMANDES_FILE_NAME = 'DM-' + DATE + ".xlsx"
+EMAILS_FILE = DATA_DIR / EMAILS_FILE_NAME
+DEMANDES_FILE = DATA_DIR / DEMANDES_FILE_NAME
 
 emails = pd.read_excel(EMAILS_FILE).dropna(how='all')
 emails['Date'] = pd.to_datetime(emails['Date'], utc=True, format="mixed").dt.tz_localize(None)
