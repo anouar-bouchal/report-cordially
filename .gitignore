@@ -1,0 +1,5 @@
+# ignore open excel files
+~*
+
+# ignore .env
+.env
