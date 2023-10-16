@@ -310,5 +310,5 @@ def report():
     return app
 
 # Run the app
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    report().run(debug=True)

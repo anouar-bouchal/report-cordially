@@ -3,9 +3,8 @@ from pathlib import Path
 import numpy as np
 
 
-EMAILS_FILE = "FCZ-2023-08-05-07-24.xlsx"
-DEMANDES_FILE = "DM-" + EMAILS_FILE
-EMAILS_PATH = Path(__file__).parent.parent / "data" / EMAILS_FILE
+EMAILS_FILE = "EMAILS-2023-09-24-09-16.xlsx"
+EMAILS_PATH = Path(__file__).parent.parent / EMAILS_FILE
 
 emails = pd.read_excel(EMAILS_PATH)[["Thread", "Date", "From", "To", "Subject"]].astype(str)
 emails.dropna(how='all')

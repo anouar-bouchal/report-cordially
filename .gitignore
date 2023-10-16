@@ -3,7 +3,7 @@
 
 # ignore .env
 .env
-private
-assets
-*.docx
-merged.xlsx
+# private
+# assets
+# *.docx
+# merged.xlsx
